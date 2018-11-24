@@ -19,15 +19,16 @@ import org.jfree.ui.ApplicationFrame ;
 public 
 class MovieRatingData 
 {
-	TreeMap<Integer, HashSet<Integer>>
-	Baskets = new TreeMap<Integer, HashSet<Integer>>() ;
+	TreeMap<String, HashSet<String>>
+	Baskets = new TreeMap<String, HashSet<String>>() ;
+	//userxfoodID set
 
-	TreeMap<Integer, Integer>
-	numRatingsOfMovies = new TreeMap<Integer, Integer>() ;
-
-	TreeMap<Integer, Double>
-	accRatingsOfMovies = new TreeMap<Integer, Double>() ;
-
+	TreeMap<String, Integer>
+	numRatingsOfMovies = new TreeMap<String, Integer>() ;
+	//foodIDx rating 사람 수
+	TreeMap<String, Double>
+	accRatingsOfMovies = new TreeMap<String, Double>() ;
+	//foodIDx rating합
 	PropertiesConfiguration config ;
 	double like_threshold ;
 	int outlier_threshold ;
@@ -44,31 +45,32 @@ class MovieRatingData
 		int i = 0;
 
 		for (CSVRecord r : CSVFormat.newFormat(',').parse(f)) {
-			Integer user   = Integer.parseInt(r.get(0)) ;
-			Integer movie  = Integer.parseInt(r.get(1)) ;
-			Double  rating = Double.parseDouble(r.get(2)) ;
+			String user = r.get(0) ;
+			String food = r.get(1) ;
+			Double rating = Double.parseDouble(r.get(2)) ;
 
-			if (numRatingsOfMovies.containsKey(movie) == false) {
-				numRatingsOfMovies.put(movie, 1) ;
-				accRatingsOfMovies.put(movie, rating) ;
+			if (numRatingsOfMovies.containsKey(food) == false) {
+				numRatingsOfMovies.put(food, 1) ;
+				accRatingsOfMovies.put(food, rating) ;
 			}
 			else {
-				numRatingsOfMovies.put(movie, numRatingsOfMovies.get(movie) + 1) ;
-				accRatingsOfMovies.put(movie, accRatingsOfMovies.get(movie) + rating) ;
+				numRatingsOfMovies.put(food, numRatingsOfMovies.get(food) + 1) ;
+				accRatingsOfMovies.put(food, accRatingsOfMovies.get(food) + rating) ;
 			}
 
 			if (rating >= like_threshold) {
-				HashSet<Integer> basket = Baskets.get(user) ;
+				HashSet<String> basket = Baskets.get(user) ;
+				//basket : food basket
 				if (basket == null) {
-					basket = new HashSet<Integer>() ;
+					basket = new HashSet<String>() ;
 					Baskets.put(user, basket) ;
 				}
-				basket.add(movie) ;
+				basket.add(food) ;
 			}
 		}
 	}
 
-	public
+/*	public
 	void removeOutliers() {
 		HashSet<Integer> outliers = new HashSet<Integer>() ;
 		for (Integer userId : Baskets.keySet()) {
@@ -78,14 +80,14 @@ class MovieRatingData
 		}
 		for (Integer userId : outliers) 
 			Baskets.remove(userId) ;
-	}
+	}*/
 
 	public 
-	TreeMap<Integer, HashSet<Integer>>
+	TreeMap<String, HashSet<String>>
 	getBaskets() {
 		return Baskets ;
 	}
-
+/*
 	public
 	void show() {
 		showMovieStat() ;
@@ -145,10 +147,7 @@ class MovieRatingData
 
 	private
 	void showRatingStat() {
-		/* TODO: 
-			implement this method to draw a histogram 
-			that shows the distribution of ratings (1.0~5.0) 
-		*/
+		
 		ApplicationFrame frame = new ApplicationFrame("Movie Rating Stat.") ;
 
 		double [] ratings = new double[accRatingsOfMovies.keySet().size()] ;
@@ -169,4 +168,5 @@ class MovieRatingData
 		frame.pack() ;
 		frame.setVisible(true);
 	}
+	*/
 }

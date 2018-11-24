@@ -9,17 +9,17 @@ import java.lang.System.*;
 public class 
 Recommender
 {
-	TreeMap<Integer, Integer> 
-	support1 = new TreeMap<Integer, Integer>() ; 
-	/* support1 : MovieId -> Num */
+	TreeMap<String, Integer> 
+	support1 = new TreeMap<String, Integer>() ; 
+	/* support1 : FoodId -> Num */
 
-	TreeMap<IntPair, Integer> 
-	support2 = new TreeMap<IntPair, Integer>() ; 
-	/* support2 : MovieId x MovieId -> Num */
+	TreeMap<StringPair, Integer> 
+	support2 = new TreeMap<StringPair, Integer>() ; 
+	/* support2 : FoodId x FoodId -> Num */
 
-	TreeMap<IntTriple, Integer> 
-	support3 = new TreeMap<IntTriple, Integer>() ; 
-	/* support3 : MovieId x MovieId x MovieId -> Num */
+	TreeMap<StringTriple, Integer> 
+	support3 = new TreeMap<StringTriple, Integer>() ; 
+	/* support3 : FoodId x FoodId x FoodId -> Num */
 
 	PropertiesConfiguration config ;
 	int min_supports ;
@@ -42,12 +42,12 @@ Recommender
 
 	public 
 	void train(MovieRatingData data) {
-		TreeMap<Integer, HashSet<Integer>> 
+		TreeMap<String, HashSet<String>> 
 		Baskets = data.getBaskets() ;
-		/* Baskets : UserID -> Set<MovieId> */
+		/* Baskets : UserID -> Set<FoodID> */
 
-		for (Integer user : Baskets.keySet()) {
-			HashSet<Integer> Basket = Baskets.get(user) ;
+		for (String user : Baskets.keySet()) {
+			HashSet<String> Basket = Baskets.get(user) ;
 
 			updateSupport1(Basket) ;
 			updateSupport2(Basket) ;
@@ -56,7 +56,8 @@ Recommender
 	}
 
 	public
-	int predict(HashSet<Integer> profile, Integer q) {
+	int predict(HashSet<String> profile, String q) {
+        //thing's to predict 
 		if (predictPair(profile, q) == 1)
 			return 1 ;
 		return predictTriple(profile, q) ;
@@ -64,8 +65,8 @@ Recommender
 
 
 	private
-	void updateSupport1(HashSet<Integer> Basket) {
-		for (Integer item : Basket) {
+	void updateSupport1(HashSet<String> Basket) {
+		for (String item : Basket) {
 			Integer c = support1.get(item) ;
 			if (c == null)
 				c = new Integer(1) ;
@@ -76,54 +77,57 @@ Recommender
 	}
 
 	private
-	void updateSupport2(HashSet<Integer> Basket) {
+	void updateSupport2(HashSet<String> Basket) {
 		if (Basket.size() >= 2) {
-			for (Set<Integer> pair : Sets.combinations(Basket, 2)) {
-				Integer c = support2.get(new IntPair(pair)) ;
+			for (Set<String> pair : Sets.combinations(Basket, 2)) {
+				Integer c = support2.get(new StringPair(pair)) ;
 				if (c == null) 
 					c = new Integer(1) ;
 				else
 					c = new Integer(c.intValue() + 1) ;
-				support2.put(new IntPair(pair), c) ;
+				support2.put(new StringPair(pair), c) ;
 			}
 		}
 	}
 
 	private
-	void updateSupport3(HashSet<Integer> Basket) {
-		HashSet<Integer> 
-		_Basket = new HashSet<Integer>() ;
-		for (Integer elem : Basket) {
+	void updateSupport3(HashSet<String> Basket) {
+		HashSet<String> 
+		_Basket = new HashSet<String>() ;
+		for (String elem : Basket) {
 			if (support1.get(elem) >= min_supports)
 				_Basket.add(elem) ;
 		}
 		Basket = _Basket ;
 
 		if (Basket.size() >= 3) {
-			for (Set<Integer> triple : Sets.combinations(Basket, 3)) {
-				Integer c = support3.get(new IntTriple(triple));
+			for (Set<String> triple : Sets.combinations(Basket, 3)) {
+				Integer c = support3.get(new StringTriple(triple));
 				if (c == null) 
 					c = new Integer(1) ;
 				else
 					c = new Integer(c.intValue() + 1) ;
-				support3.put(new IntTriple(triple), c) ;
+				support3.put(new StringTriple(triple), c) ;
 			}
 		}
 	}
 
 	private
-	int predictPair(HashSet<Integer> profile, Integer q) {
-		/* TODO: implement this method */
+	int predictPair(HashSet<String> profile, String q) {
+        /* TODO: implement this method */
+        //profile => set of foodId
 		if (profile.size() < 1)
-			return 0 ;
+            return 0 ;
+            //구매 이력이 적음
 
-		int evidence = 0;
-		for (Integer s : profile){
+        int evidence = 0;
+        
+		for (String s : profile){
 			Integer den = support1.get(s);
 			if (den == null)
 				continue;
 
-			IntPair item = new IntPair(s.intValue(), q.intValue());
+			StringPair item = new StringPair(s,q);
 			Integer num = support2.get(item);
 			if (num == null)
 				continue;
@@ -134,25 +138,25 @@ Recommender
 		}
 		
 		if (evidence != 0)
-			return 1;
+			return 1;//만족하는 경우가 하나라도 있다면
 	
 		return 0 ;
 	}
 
 	private
-	int predictTriple(HashSet<Integer> profile, Integer q) {
+	int predictTriple(HashSet<String> profile, String q) {
 		if (profile.size() < 2)
 			return 0 ;
 
 		int evidence = 0 ;
-		for (Set<Integer> p : Sets.combinations(profile, 2)) {
-			Integer den = support2.get(new IntPair(p)) ;
+		for (Set<String> p : Sets.combinations(profile, 2)) {
+			Integer den = support2.get(new StringPair(p)) ;
 			if (den == null)
 				continue ;
 
-			TreeSet<Integer> t = new TreeSet<Integer>(p) ;
+			TreeSet<String> t = new TreeSet<String>(p) ;
 			t.add(q) ;
-			IntTriple item = new IntTriple(t) ;			
+			StringTriple item = new StringTriple(t) ;			
 			Integer num = support3.get(item) ;
 			if (num == null)
 				continue ;
@@ -174,14 +178,14 @@ Recommender
 }
 
 class 
-IntPair implements Comparable 
+StringPair implements Comparable 
 {
-	int first ;
-	int second ;
+	String first ;
+	String second ;
 
 	public
-	IntPair(int first, int second) {
-		if (first <= second) {
+	StringPair(String first, String second) {
+		if (first.compareTo(second)<0) {
 			this.first = first ;
 			this.second = second ;
 		}
@@ -192,9 +196,9 @@ IntPair implements Comparable
 	}
 
 	public
-	IntPair(Set<Integer> s) {
-		Integer [] elem = s.toArray(new Integer[2]) ;
-		if (elem[0] < elem[1]) {
+	StringPair(Set<String> s) {
+		String [] elem = s.toArray(new String[2]) ;
+		if (elem[0].compareTo(elem[1])<0) {
 			this.first = elem[0] ;
 			this.second = elem[1] ;
 		}
@@ -206,7 +210,7 @@ IntPair implements Comparable
 
 	public 
 	int compareTo(Object obj) {
-		IntPair p = (IntPair) obj ;
+		StringPair p = (StringPair) obj ;
 
 		if (this.first < p.first) 
 			return -1 ;
@@ -218,23 +222,23 @@ IntPair implements Comparable
 }
 
 class 
-IntTriple implements Comparable 
+StringTriple implements Comparable 
 {
-	int [] elem = new int[3];
+	String [] elem = new String[3];
 
 	public
-	IntTriple(Set<Integer> s) {
+	StringTriple(Set<String> s) {
 		/* TODO: implement this method */
-		Integer [] tempelem = s.toArray(new Integer[3]);
+		String [] tempelem = s.toArray(new String[3]);
 		for (int i = 0; i < 3; i++){
 			this.elem[i] = tempelem[i];
 		}
 		Arrays.sort(this.elem);
 	}
-
+/*
 	public 
 	int compareTo(Object obj) {
-		/* TODO: implement this method */
+	
 		IntTriple t = (IntTriple) obj;
 
 		for (int i = 0; i < 3; i++){
@@ -245,5 +249,6 @@ IntTriple implements Comparable
 		}
 
 		return 0;
-	}
+    }
+    */
 }

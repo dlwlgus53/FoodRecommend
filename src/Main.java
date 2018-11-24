@@ -32,7 +32,7 @@ class Main
 		try {
 			cmd = parser.parse(options, args) ;
 			if (cmd.hasOption("d"))
-				isToShow = true ;
+				isToShow = false ;/*이거수정했음 원래는 ture*/
 			if (cmd.hasOption("c"))
 				configFilePath = cmd.getOptionValue("c") ;
 			if (cmd.hasOption("h")) {
@@ -50,21 +50,23 @@ class Main
 
 		try {
 			MovieRatingData data = new MovieRatingData(config) ;
-			FileReader ftrain = new FileReader(config.getString("data.training")) ;
-			FileReader ftest =  new FileReader(config.getString("data.testing")) ;
+			FileReader ftrain = new FileReader(config.getString("data.orgin")) ;
+			//FileReader ftest =  new FileReader(config.getString("data.testing")) ;
 
 			logger.debug("Data loading starts.") ;		
 			data.load(ftrain) ;
 			logger.debug("Data loading finishes.") ;
-
+			/*
 			if (isToShow)
 				data.show() ;
 			data.removeOutliers() ;
+			*/
 
 			Recommender rec = new Recommender(config) ;
 			rec.train(data) ;
-
+			/*
 			test(ftest, rec) ;
+			*/
 		}
 		catch (IOException e) {
 			System.err.println(e) ;
@@ -83,49 +85,56 @@ class Main
 		}
 	}
 
-
+/*
 	public static
 	void test (FileReader ftest, Recommender rec) throws IOException
 	{
 		int [][] error = new int[2][2] ; // actual x predict -> # 	
 
-		TreeMap<Integer, HashSet<Integer>> 
-		users = new TreeMap<Integer, HashSet<Integer>>();
+		TreeMap<String, HashSet<String>> 
+		users = new TreeMap<String, HashSet<String>>();
+		//user x foodset
 
-		TreeMap<Integer, HashSet<Integer>> 
-		q_positive = new TreeMap<Integer, HashSet<Integer>>();
+		TreeMap<String, HashSet<String>> 
+		q_positive = new TreeMap<String, HashSet<String>>();
 
-		TreeMap<Integer, HashSet<Integer>> 
-		q_negative = new TreeMap<Integer, HashSet<Integer>>();
+		TreeMap<String, HashSet<String>> 
+		q_negative = new TreeMap<String, HashSet<String>>();
 
 		for (CSVRecord r : CSVFormat.newFormat(',').parse(ftest)) {
-			Integer user = Integer.parseInt(r.get(0)) ;
-			Integer movie = Integer.parseInt(r.get(1)) ;
+			//한줄 읽어오기
+			String user = r.get(0) ;
+			String food = r.get(1) ;
 			Double rating = Double.parseDouble(r.get(2)) ;
-			String type = r.get(3) ;
+			//String type = r.get(3) ;
 
 			if (users.containsKey(user) == false) {
-				users.put(user, new HashSet<Integer>()) ;
-				q_positive.put(user, new HashSet<Integer>()) ;
-				q_negative.put(user, new HashSet<Integer>()) ;
+				users.put(user, new HashSet<String>()) ;
+				q_positive.put(user, new HashSet<String>()) ;
+				q_negative.put(user, new HashSet<String>()) ;
 			}
 
+			if (rating >= config.getDouble("data.like_threshold"))
+					users.get(user).add(food) ;
+					//점수가 어느정도 높으면 넣기	
+			
 			if (type.equals("c")) {
 				if (rating >= config.getDouble("data.like_threshold"))
-					users.get(user).add(movie) ;								
+					users.get(user).add(foodID) ;								
 			}
-			else /* r.get(3) is "q" */{
+			else {
 				if (rating >= config.getDouble("data.like_threshold"))
 					q_positive.get(user).add(movie) ;
 				else
 					q_negative.get(user).add(movie) ;
 			}
+			
 		}
 
-		for (Integer u : users.keySet()) {
-			HashSet<Integer> u_movies = users.get(u) ;
+		for (String u : users.keySet()) {
+			HashSet<String> u_movies = users.get(u) ;
 			
-			for (Integer q : q_positive.get(u))
+			for (String q : q_positive.get(u))
 				error[1][rec.predict(u_movies, q)] += 1 ;
 	
 			for (Integer q : q_negative.get(u))
@@ -157,4 +166,5 @@ class Main
 		informer.info("[[" + error[0][0] + ", " + error[0][1] + "], "  + 
 			"[" + error[1][0] + ", " + error[1][1] + "]]") ;
 	}
+	*/
 }
