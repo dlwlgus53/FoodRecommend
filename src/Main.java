@@ -50,8 +50,8 @@ class Main
 
 		try {
 			MovieRatingData data = new MovieRatingData(config) ;
-			FileReader ftrain = new FileReader(config.getString("data.orgin")) ;
-			//FileReader ftest =  new FileReader(config.getString("data.testing")) ;
+			FileReader ftrain = new FileReader(config.getString("data.training")) ;
+			FileReader ftest =  new FileReader(config.getString("data.testing")) ;
 
 			logger.debug("Data loading starts.") ;		
 			data.load(ftrain) ;
@@ -63,10 +63,9 @@ class Main
 			*/
 
 			Recommender rec = new Recommender(config) ;
-			rec.train(data) ;
-			/*
+			rec.train(data);
 			test(ftest, rec) ;
-			*/
+			
 		}
 		catch (IOException e) {
 			System.err.println(e) ;
@@ -85,28 +84,30 @@ class Main
 		}
 	}
 
-/*
+
 	public static
 	void test (FileReader ftest, Recommender rec) throws IOException
-	{
+	{	logger.debug("Doing test") ;
+
 		int [][] error = new int[2][2] ; // actual x predict -> # 	
 
 		TreeMap<String, HashSet<String>> 
 		users = new TreeMap<String, HashSet<String>>();
-		//user x foodset
+		//users  =  user x foodset
 
 		TreeMap<String, HashSet<String>> 
 		q_positive = new TreeMap<String, HashSet<String>>();
 
 		TreeMap<String, HashSet<String>> 
 		q_negative = new TreeMap<String, HashSet<String>>();
-
+		logger.debug("Reading csv") ;
 		for (CSVRecord r : CSVFormat.newFormat(',').parse(ftest)) {
+			
 			//한줄 읽어오기
 			String user = r.get(0) ;
 			String food = r.get(1) ;
 			Double rating = Double.parseDouble(r.get(2)) ;
-			//String type = r.get(3) ;
+			String type = r.get(3) ;
 
 			if (users.containsKey(user) == false) {
 				users.put(user, new HashSet<String>()) ;
@@ -114,31 +115,32 @@ class Main
 				q_negative.put(user, new HashSet<String>()) ;
 			}
 
-			if (rating >= config.getDouble("data.like_threshold"))
-					users.get(user).add(food) ;
-					//점수가 어느정도 높으면 넣기	
-			
 			if (type.equals("c")) {
 				if (rating >= config.getDouble("data.like_threshold"))
-					users.get(user).add(foodID) ;								
+					users.get(user).add(food) ;								
+					//일반항목 -> 좋아하면 user가 좋아하는 음식 리스트 중 하나로 넣기
 			}
 			else {
 				if (rating >= config.getDouble("data.like_threshold"))
-					q_positive.get(user).add(movie) ;
+					q_positive.get(user).add(food) ;
+					//question일때, 유저가 좋아하는 음식이라면 질문 리스트에 넣기
+
 				else
-					q_negative.get(user).add(movie) ;
+					q_negative.get(user).add(food) ;
+					//반대경우
 			}
 			
 		}
+		logger.debug("Reading csv finish" ) ;
 
 		for (String u : users.keySet()) {
-			HashSet<String> u_movies = users.get(u) ;
+			HashSet<String> u_foods = users.get(u) ;
 			
 			for (String q : q_positive.get(u))
-				error[1][rec.predict(u_movies, q)] += 1 ;
+				error[1][rec.predict(u_foods, q)] += 1 ;
 	
-			for (Integer q : q_negative.get(u))
-				error[0][rec.predict(u_movies, q)] += 1 ;
+			for (String q : q_negative.get(u))
+				error[0][rec.predict(u_foods, q)] += 1 ;
 		}
 
 		if (error[0][1] + error[1][1] > 0)
@@ -163,8 +165,11 @@ class Main
 		else
 			informer.info("All case accuracy: undefined.") ;
 
-		informer.info("[[" + error[0][0] + ", " + error[0][1] + "], "  + 
+		logger.debug("[[" + error[0][0] + ", " + error[0][1] + "], "  + 
 			"[" + error[1][0] + ", " + error[1][1] + "]]") ;
+		logger.debug("test finish") ;
+		
 	}
-	*/
+	
+	
 }

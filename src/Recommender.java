@@ -58,9 +58,17 @@ Recommender
 	public
 	int predict(HashSet<String> profile, String q) {
         //thing's to predict 
+        int predict =0;
 		if (predictPair(profile, q) == 1)
-			return 1 ;
-		return predictTriple(profile, q) ;
+            predict = 1;
+        if( predictTriple(profile, q)==1)
+            predict =1;
+		/*
+        if(predict == 1){
+            System.out.println("predict yes");
+            System.out.println(profile.toString() + q);
+        }*/
+		return predict ;
 	}
 
 
@@ -198,27 +206,35 @@ StringPair implements Comparable
 	public
 	StringPair(Set<String> s) {
 		String [] elem = s.toArray(new String[2]) ;
-		if (elem[0].compareTo(elem[1])<0) {
+		Arrays.sort(elem);
+		/*if (elem[0].compareTo(elem[1])<0) {
 			this.first = elem[0] ;
 			this.second = elem[1] ;
 		}
 		else {
 			this.first = elem[1] ;
 			this.second = elem[0] ;
-		}
+		}*/
 	}
 
 	public 
 	int compareTo(Object obj) {
-		StringPair p = (StringPair) obj ;
-
-		if (this.first < p.first) 
+		/*
+		Object[] t= (Object []) obj;
+		
+		if (this.first < t.first) 
 			return -1 ;
-		if (this.first > p.first)
+		if (this.first > t.first)
 			return 1 ;
 
-		return (this.second - p.second) ;
+		return (this.second - t.second) ;
+		*/
+		
+		return 0;
+
 	}
+	
+    
 }
 
 class 
@@ -233,22 +249,25 @@ StringTriple implements Comparable
 		for (int i = 0; i < 3; i++){
 			this.elem[i] = tempelem[i];
 		}
-		Arrays.sort(this.elem);
+		Arrays.sort(elem);
 	}
-/*
+
 	public 
 	int compareTo(Object obj) {
-	
-		IntTriple t = (IntTriple) obj;
-
+		/*
+		Object[] t= (Object []) obj;
+				
 		for (int i = 0; i < 3; i++){
-			if(this.elem[i] < t.elem[i])
+			for(int j=0; j<elem[i])
+			char t1 = elem[i][0];
+			if(this.elem[i] < t[i])
 				return -1;
 			if(this.elem[i] > t.elem[i])
 				return 1;
-		}
+		}*/
 
 		return 0;
     }
-    */
+    
+    
 }

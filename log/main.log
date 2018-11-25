@@ -1,204 +1,30 @@
-2018-10-19 18:10:38,438 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 18:10:39,192 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 19:05:04,478 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 19:05:05,004 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 19:09:35,160 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 19:09:35,683 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 20:35:39,783 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 20:35:40,290 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 20:36:43,483 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 20:36:43,990 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 20:36:43,990 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 20:36:43,991 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 20:39:25,226 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 20:39:25,732 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 20:39:25,732 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 20:39:25,733 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 20:42:36,833 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 20:42:37,341 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 20:42:37,341 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 20:42:37,342 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 21:47:33,322 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 21:47:33,829 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 21:47:33,829 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 21:47:33,830 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:03:28,377 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:03:28,889 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:03:28,889 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:03:28,890 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:04:32,233 INFO  [main] MovieRec.Main (Main.java:138) - Precision: 0.795
-2018-10-19 22:04:32,233 INFO  [main] MovieRec.Main (Main.java:145) - Recall: 0.290
-2018-10-19 22:04:32,234 INFO  [main] MovieRec.Main (Main.java:152) - All case accuracy: 0.580
-2018-10-19 22:04:32,234 INFO  [main] MovieRec.Main (Main.java:159) - [[85, 8], [76, 31]]
-2018-10-19 22:05:26,242 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:05:26,776 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:05:26,776 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:05:26,777 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:06:29,531 INFO  [main] MovieRec.Main (Main.java:138) - Precision: 0.800
-2018-10-19 22:06:29,532 INFO  [main] MovieRec.Main (Main.java:145) - Recall: 0.299
-2018-10-19 22:06:29,532 INFO  [main] MovieRec.Main (Main.java:152) - All case accuracy: 0.585
-2018-10-19 22:06:29,532 INFO  [main] MovieRec.Main (Main.java:159) - [[85, 8], [75, 32]]
-2018-10-19 22:09:00,077 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:09:00,586 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:09:00,586 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:09:00,587 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:10:00,369 INFO  [main] MovieRec.Main (Main.java:138) - Precision: 0.800
-2018-10-19 22:10:00,370 INFO  [main] MovieRec.Main (Main.java:145) - Recall: 0.299
-2018-10-19 22:10:00,370 INFO  [main] MovieRec.Main (Main.java:152) - All case accuracy: 0.585
-2018-10-19 22:10:00,370 INFO  [main] MovieRec.Main (Main.java:159) - [[85, 8], [75, 32]]
-2018-10-19 22:12:08,335 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:12:08,844 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:12:08,844 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:12:08,845 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:13:08,393 INFO  [main] MovieRec.Main (Main.java:138) - Precision: 0.818
-2018-10-19 22:13:08,394 INFO  [main] MovieRec.Main (Main.java:145) - Recall: 0.336
-2018-10-19 22:13:08,394 INFO  [main] MovieRec.Main (Main.java:152) - All case accuracy: 0.605
-2018-10-19 22:13:08,394 INFO  [main] MovieRec.Main (Main.java:159) - [[85, 8], [71, 36]]
-2018-10-19 22:13:58,929 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:13:59,434 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:13:59,435 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:13:59,436 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:14:58,192 INFO  [main] MovieRec.Main (Main.java:138) - Precision: 0.778
-2018-10-19 22:14:58,192 INFO  [main] MovieRec.Main (Main.java:145) - Recall: 0.393
-2018-10-19 22:14:58,192 INFO  [main] MovieRec.Main (Main.java:152) - All case accuracy: 0.615
-2018-10-19 22:14:58,193 INFO  [main] MovieRec.Main (Main.java:159) - [[81, 12], [65, 42]]
-2018-10-19 22:20:33,591 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:20:34,100 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:20:34,100 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:20:34,557 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:21:30,614 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:21:31,122 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:21:31,122 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:21:31,557 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:28:15,116 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:28:15,621 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:28:15,621 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:28:16,053 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:38:01,013 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:38:01,522 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:38:01,522 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:38:01,952 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 22:40:27,725 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 22:40:28,234 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 22:40:28,234 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 22:40:28,653 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 23:25:24,224 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:25:24,891 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:25:24,891 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:27:04,634 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:27:05,305 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:27:05,305 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:28:34,552 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:28:35,223 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:28:35,223 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:33:32,618 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:33:33,315 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:33:33,316 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:34:23,063 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:34:23,789 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:34:23,789 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:34:24,240 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 23:38:11,830 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:38:12,525 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:38:12,525 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:38:13,030 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 23:38:39,177 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:38:39,867 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:38:39,867 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:38:40,362 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 23:40:48,463 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:40:49,158 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:40:49,158 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:42:42,313 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:42:43,026 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:42:43,026 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:44:13,267 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:44:13,966 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:44:13,966 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:44:22,017 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:44:22,712 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:44:22,713 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:47:17,067 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:47:17,761 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:47:17,762 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:47:18,199 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 23:47:49,913 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:47:50,611 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:47:50,611 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:47:51,128 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 23:49:29,012 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:49:29,734 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:49:29,735 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:49:30,240 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 23:50:11,025 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:50:11,719 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:50:11,720 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:50:12,228 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 23:51:13,300 INFO  [main] MovieRec.Main (Main.java:138) - Precision: 0.818
-2018-10-19 23:51:13,301 INFO  [main] MovieRec.Main (Main.java:145) - Recall: 0.336
-2018-10-19 23:51:13,301 INFO  [main] MovieRec.Main (Main.java:152) - All case accuracy: 0.605
-2018-10-19 23:51:13,301 INFO  [main] MovieRec.Main (Main.java:159) - [[85, 8], [71, 36]]
-2018-10-19 23:52:30,823 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:52:31,515 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:52:31,516 DEBUG [main] MovieRec.Main (Main.java:60) - Training started
-2018-10-19 23:52:32,028 DEBUG [main] MovieRec.Main (Main.java:64) - Training ended
-2018-10-19 23:53:34,304 INFO  [main] MovieRec.Main (Main.java:138) - Precision: 0.818
-2018-10-19 23:53:34,305 INFO  [main] MovieRec.Main (Main.java:145) - Recall: 0.336
-2018-10-19 23:53:34,305 INFO  [main] MovieRec.Main (Main.java:152) - All case accuracy: 0.605
-2018-10-19 23:53:34,305 INFO  [main] MovieRec.Main (Main.java:159) - [[85, 8], [71, 36]]
-2018-10-19 23:57:12,581 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-19 23:57:13,269 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-19 23:58:14,892 INFO  [main] MovieRec.Main (Main.java:136) - Precision: 0.818
-2018-10-19 23:58:14,892 INFO  [main] MovieRec.Main (Main.java:143) - Recall: 0.336
-2018-10-19 23:58:14,893 INFO  [main] MovieRec.Main (Main.java:150) - All case accuracy: 0.605
-2018-10-19 23:58:14,893 INFO  [main] MovieRec.Main (Main.java:157) - [[85, 8], [71, 36]]
-2018-10-20 00:09:16,942 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-20 00:09:17,734 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-20 00:10:41,273 INFO  [main] MovieRec.Main (Main.java:136) - Precision: 0.909
-2018-10-20 00:10:41,274 INFO  [main] MovieRec.Main (Main.java:143) - Recall: 0.364
-2018-10-20 00:10:41,274 INFO  [main] MovieRec.Main (Main.java:150) - All case accuracy: 0.445
-2018-10-20 00:10:41,274 INFO  [main] MovieRec.Main (Main.java:157) - [[29, 6], [105, 60]]
-2018-10-20 00:12:45,912 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-20 00:12:46,566 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-20 00:13:01,637 INFO  [main] MovieRec.Main (Main.java:136) - Precision: 0.429
-2018-10-20 00:13:01,638 INFO  [main] MovieRec.Main (Main.java:143) - Recall: 0.207
-2018-10-20 00:13:01,638 INFO  [main] MovieRec.Main (Main.java:150) - All case accuracy: 0.845
-2018-10-20 00:13:01,638 INFO  [main] MovieRec.Main (Main.java:157) - [[163, 8], [23, 6]]
-2018-10-20 00:15:04,089 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-20 00:15:04,782 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-20 00:16:07,039 INFO  [main] MovieRec.Main (Main.java:136) - Precision: 0.857
-2018-10-20 00:16:07,039 INFO  [main] MovieRec.Main (Main.java:143) - Recall: 0.280
-2018-10-20 00:16:07,039 INFO  [main] MovieRec.Main (Main.java:150) - All case accuracy: 0.590
-2018-10-20 00:16:07,039 INFO  [main] MovieRec.Main (Main.java:157) - [[88, 5], [77, 30]]
-2018-10-20 00:18:45,349 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-20 00:18:46,039 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-20 00:19:49,240 INFO  [main] MovieRec.Main (Main.java:136) - Precision: 0.825
-2018-10-20 00:19:49,241 INFO  [main] MovieRec.Main (Main.java:143) - Recall: 0.308
-2018-10-20 00:19:49,241 INFO  [main] MovieRec.Main (Main.java:150) - All case accuracy: 0.595
-2018-10-20 00:19:49,241 INFO  [main] MovieRec.Main (Main.java:157) - [[86, 7], [74, 33]]
-2018-10-22 21:18:15,560 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-22 21:18:16,236 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-22 21:19:16,159 INFO  [main] MovieRec.Main (Main.java:136) - Precision: 0.825
-2018-10-22 21:19:16,160 INFO  [main] MovieRec.Main (Main.java:143) - Recall: 0.308
-2018-10-22 21:19:16,160 INFO  [main] MovieRec.Main (Main.java:150) - All case accuracy: 0.595
-2018-10-22 21:19:16,160 INFO  [main] MovieRec.Main (Main.java:157) - [[86, 7], [74, 33]]
-2018-10-22 23:54:13,378 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-22 23:54:13,888 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-22 23:55:12,557 INFO  [main] MovieRec.Main (Main.java:136) - Precision: 0.825
-2018-10-22 23:55:12,558 INFO  [main] MovieRec.Main (Main.java:143) - Recall: 0.308
-2018-10-22 23:55:12,559 INFO  [main] MovieRec.Main (Main.java:150) - All case accuracy: 0.595
-2018-10-22 23:55:12,559 INFO  [main] MovieRec.Main (Main.java:157) - [[86, 7], [74, 33]]
-2018-10-23 00:28:30,563 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-23 00:28:31,073 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-23 00:29:09,818 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-23 00:29:10,345 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-23 00:30:09,620 INFO  [main] MovieRec.Main (Main.java:136) - Precision: 0.825
-2018-10-23 00:30:09,621 INFO  [main] MovieRec.Main (Main.java:143) - Recall: 0.308
-2018-10-23 00:30:09,621 INFO  [main] MovieRec.Main (Main.java:150) - All case accuracy: 0.595
-2018-10-23 00:30:09,621 INFO  [main] MovieRec.Main (Main.java:157) - [[86, 7], [74, 33]]
-2018-10-23 01:03:25,246 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-23 01:03:25,752 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-23 01:04:19,560 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-23 01:04:20,068 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
-2018-10-23 15:24:03,527 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
-2018-10-23 15:24:04,043 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-25 22:43:36,540 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-25 22:43:38,713 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-25 22:47:22,979 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-25 22:47:25,239 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-25 22:47:33,228 DEBUG [main] MovieRec.Main (Main.java:92) - Doing test
+2018-11-25 22:49:48,090 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-25 22:49:50,641 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-25 22:50:00,958 DEBUG [main] MovieRec.Main (Main.java:92) - Doing test
+2018-11-25 22:50:00,964 DEBUG [main] MovieRec.Main (Main.java:105) - Reading csv
+2018-11-25 22:50:04,544 DEBUG [main] MovieRec.Main (Main.java:136) - Reading csv finish
+2018-11-25 22:52:28,017 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-25 22:52:30,272 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-25 22:52:38,484 DEBUG [main] MovieRec.Main (Main.java:92) - Doing test
+2018-11-25 22:52:38,484 DEBUG [main] MovieRec.Main (Main.java:105) - Reading csv
+2018-11-25 22:52:40,556 DEBUG [main] MovieRec.Main (Main.java:136) - Reading csv finish
+2018-11-25 22:54:18,122 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-25 22:54:21,070 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-25 22:54:31,538 DEBUG [main] MovieRec.Main (Main.java:92) - Doing test
+2018-11-25 22:54:31,538 DEBUG [main] MovieRec.Main (Main.java:105) - Reading csv
+2018-11-25 22:54:33,936 DEBUG [main] MovieRec.Main (Main.java:136) - Reading csv finish
+2018-11-25 22:54:56,898 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-25 22:54:59,051 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-25 22:55:06,863 DEBUG [main] MovieRec.Main (Main.java:92) - Doing test
+2018-11-25 22:55:06,863 DEBUG [main] MovieRec.Main (Main.java:105) - Reading csv
+2018-11-25 22:55:09,330 DEBUG [main] MovieRec.Main (Main.java:136) - Reading csv finish
+2018-11-25 22:56:14,110 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-25 22:56:16,316 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-25 22:56:24,086 DEBUG [main] MovieRec.Main (Main.java:90) - Doing test
+2018-11-25 22:56:24,086 DEBUG [main] MovieRec.Main (Main.java:103) - Reading csv
+2018-11-25 22:56:26,402 DEBUG [main] MovieRec.Main (Main.java:134) - Reading csv finish
