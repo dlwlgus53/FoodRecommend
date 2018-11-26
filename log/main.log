@@ -28,3 +28,23 @@
 2018-11-25 22:56:24,086 DEBUG [main] MovieRec.Main (Main.java:90) - Doing test
 2018-11-25 22:56:24,086 DEBUG [main] MovieRec.Main (Main.java:103) - Reading csv
 2018-11-25 22:56:26,402 DEBUG [main] MovieRec.Main (Main.java:134) - Reading csv finish
+2018-11-26 11:14:12,185 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-26 11:14:14,091 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-26 11:14:20,966 DEBUG [main] MovieRec.Main (Main.java:90) - Doing test
+2018-11-26 11:14:20,971 DEBUG [main] MovieRec.Main (Main.java:103) - Reading csv
+2018-11-26 11:14:22,873 DEBUG [main] MovieRec.Main (Main.java:134) - Reading csv finish
+2018-11-26 11:20:58,930 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-26 11:21:01,146 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-26 11:21:08,910 DEBUG [main] MovieRec.Main (Main.java:90) - Doing test
+2018-11-26 11:21:08,916 DEBUG [main] MovieRec.Main (Main.java:103) - Reading csv
+2018-11-26 11:21:10,922 DEBUG [main] MovieRec.Main (Main.java:134) - Reading csv finish
+2018-11-26 11:24:48,060 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-26 11:24:49,963 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-26 11:24:57,175 DEBUG [main] MovieRec.Main (Main.java:90) - Doing test
+2018-11-26 11:24:57,177 DEBUG [main] MovieRec.Main (Main.java:103) - Reading csv
+2018-11-26 11:24:59,649 DEBUG [main] MovieRec.Main (Main.java:134) - Reading csv finish
+2018-11-26 11:25:07,640 INFO  [main] MovieRec.Main (Main.java:147) - Precision: 0.849
+2018-11-26 11:25:07,647 INFO  [main] MovieRec.Main (Main.java:154) - Recall: 0.696
+2018-11-26 11:25:07,648 INFO  [main] MovieRec.Main (Main.java:161) - All case accuracy: 0.663
+2018-11-26 11:25:07,663 DEBUG [main] MovieRec.Main (Main.java:168) - [[69, 59], [145, 332]]
+2018-11-26 11:25:07,664 DEBUG [main] MovieRec.Main (Main.java:170) - test finish

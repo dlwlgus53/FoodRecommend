@@ -163,7 +163,10 @@ Recommender
 				continue ;
 
 			TreeSet<String> t = new TreeSet<String>(p) ;
-			t.add(q) ;
+			if(t.contains(q))
+				return 0;
+			else
+				t.add(q) ;
 			StringTriple item = new StringTriple(t) ;			
 			Integer num = support3.get(item) ;
 			if (num == null)
