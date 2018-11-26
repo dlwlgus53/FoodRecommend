@@ -69,8 +69,8 @@ class MovieRatingData
 			}
 		}
 	}
-
-/*	public
+/*
+	public
 	void removeOutliers() {
 		HashSet<Integer> outliers = new HashSet<Integer>() ;
 		for (Integer userId : Baskets.keySet()) {
@@ -80,8 +80,8 @@ class MovieRatingData
 		}
 		for (Integer userId : outliers) 
 			Baskets.remove(userId) ;
-	}*/
-
+	}
+*/
 	public 
 	TreeMap<String, HashSet<String>>
 	getBaskets() {

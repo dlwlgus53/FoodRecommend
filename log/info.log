@@ -1,3 +1,6 @@
 2018-11-26 11:25:07,640 INFO  [main] MovieRec.Main (Main.java:147) - Precision: 0.849
 2018-11-26 11:25:07,647 INFO  [main] MovieRec.Main (Main.java:154) - Recall: 0.696
 2018-11-26 11:25:07,648 INFO  [main] MovieRec.Main (Main.java:161) - All case accuracy: 0.663
+2018-11-26 19:07:12,737 INFO  [main] MovieRec.Main (Main.java:147) - Precision: 0.849
+2018-11-26 19:07:12,748 INFO  [main] MovieRec.Main (Main.java:154) - Recall: 0.696
+2018-11-26 19:07:12,748 INFO  [main] MovieRec.Main (Main.java:161) - All case accuracy: 0.663

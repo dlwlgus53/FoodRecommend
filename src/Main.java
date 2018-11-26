@@ -168,6 +168,12 @@ class Main
 		logger.debug("[[" + error[0][0] + ", " + error[0][1] + "], "  + 
 			"[" + error[1][0] + ", " + error[1][1] + "]]") ;
 		logger.debug("test finish") ;
+
+		/*
+		[0][0] true negative	[0][1] false positive	[1][0]false negative  [1][1]true positive
+		precision : 맞다고 예상한것 중에서 맞은것
+		recall : 사용자가 좋다고 한 것 중에서 컴퓨터가 좋을 거라고 예측한 것
+		*/
 		
 	}
 	

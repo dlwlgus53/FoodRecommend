@@ -48,3 +48,13 @@
 2018-11-26 11:25:07,648 INFO  [main] MovieRec.Main (Main.java:161) - All case accuracy: 0.663
 2018-11-26 11:25:07,663 DEBUG [main] MovieRec.Main (Main.java:168) - [[69, 59], [145, 332]]
 2018-11-26 11:25:07,664 DEBUG [main] MovieRec.Main (Main.java:170) - test finish
+2018-11-26 19:06:09,037 DEBUG [main] MovieRec.Main (Main.java:56) - Data loading starts.
+2018-11-26 19:06:11,793 DEBUG [main] MovieRec.Main (Main.java:58) - Data loading finishes.
+2018-11-26 19:06:21,803 DEBUG [main] MovieRec.Main (Main.java:90) - Doing test
+2018-11-26 19:06:21,803 DEBUG [main] MovieRec.Main (Main.java:103) - Reading csv
+2018-11-26 19:06:24,324 DEBUG [main] MovieRec.Main (Main.java:134) - Reading csv finish
+2018-11-26 19:07:12,737 INFO  [main] MovieRec.Main (Main.java:147) - Precision: 0.849
+2018-11-26 19:07:12,748 INFO  [main] MovieRec.Main (Main.java:154) - Recall: 0.696
+2018-11-26 19:07:12,748 INFO  [main] MovieRec.Main (Main.java:161) - All case accuracy: 0.663
+2018-11-26 19:07:12,767 DEBUG [main] MovieRec.Main (Main.java:168) - [[69, 59], [145, 332]]
+2018-11-26 19:07:12,768 DEBUG [main] MovieRec.Main (Main.java:170) - test finish
